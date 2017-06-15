@@ -1,0 +1,188 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "LMS Assembly",
+	"scopeName": "source.lmsasm",
+	"foldingStartMarker": "\\{\\s*$",
+	"foldingStopMarker": "^\\s*\\}",
+	"patterns": [
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#defines"
+		},
+		{
+			"include": "#variable-declarations"
+		},
+		{
+			"include": "#object-declarations"
+		}
+	],
+	"repository": {
+		"defines": {
+			"patterns": [
+				{
+					"match": "^\\s*(define)\\s+(\\w+)\\s+(.*)$",
+					"captures": {
+						"1": {
+							"name": "keyword.other.lmsasm"
+						},
+						"2": {
+							"name": "entity.name.lmsasm"
+						},
+						"3": {
+							"patterns": [
+								{
+									"include": "#constants"
+								},
+								{
+									"include": "#comments"
+								}
+							]
+						}
+					}
+				}
+			]
+		},
+		"variable-declarations": {
+			"patterns": [
+				{
+					"match": "\\b(DATA(?:8|16|32|S|F)|(?:IN|OUT|IO)_(?:8|16|32|S|F))\\s+(\\w+)(?:\\s+(.*))?",
+					"captures": {
+						"1": {
+							"name": "support.type.lmsasm"
+						},
+						"2": {
+							"name": "variable.name.lmsasm"
+						},
+						"3": {
+							"patterns": [
+								{
+									"include": "#constants"
+								},
+								{
+									"include": "#comments"
+								}
+							]
+						}
+					}
+				}
+			]
+		},
+		"object-declarations": {
+			"patterns": [
+				{
+					"begin": "\\b(vmthread|subcall)\\s+(\\w+)",
+					"end": "\\}",
+					"beginCaptures": {
+						"1": {
+							"name": "keyword.other.lmsasm"
+						},
+						"2": {
+							"name": "entity.name.function.lmsasm"
+						}
+					},
+					"patterns": [
+						{
+							"include": "#comments"
+						},
+						{
+							"include": "#object-blocks"
+						}
+					]
+				}
+			]
+		},
+		"object-blocks": {
+			"patterns": [
+				{
+					"name": "meta.block.lmsasm",
+					"begin": "\\{",
+					"end": "(?=\\})",
+					"patterns": [
+						{
+							"include": "#comments"
+						},
+						{
+							"include": "#variable-declarations"
+						},
+						{
+							"include": "#opcode-calls"
+						},
+						{
+							"include": "#labels"
+						}
+					]
+				}
+			]
+		},
+		"opcode-calls": {
+			"patterns": [
+				{
+					"begin": "\\b(\\w+)\\(",
+					"end": "\\)",
+					"beginCaptures": {
+						"1": {
+							"name": "support.function.lmsasm"
+						}
+					},
+					"patterns": [
+						{
+							"include": "#comments"
+						},
+						{
+							"include": "#constants"
+						}
+					]
+				}
+			]
+		},
+		"labels": {
+			"patterns": [
+				{
+					"name": "meta.tag.lmsasm",
+					"match": "\\b\\w+:"
+				}
+			]
+		},
+		"constants": {
+			"patterns": [
+				{
+					"include": "#strings"
+				},
+				{
+					"name": "constant.numeric.lmsasm",
+					"match": "\\b(0x[a-fA-F0-9]+|\\d+\\.?\\d*)\\b"
+				},
+				{
+					"name":"support.constant.lmsasm",
+					"match": "\\b(HW_BT)\\b"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.single.lmsasm",
+			"begin": "'",
+			"end": "'",
+			"patterns": [
+				{
+					"name": "constant.character.escape.lmsasm",
+					"match": "\\\\."
+				}
+			]
+		},
+		"comments": {
+			"patterns": [
+				{
+					"name": "comment.line.double-slash.lmsasm",
+					"match": "//.*$"
+				},
+				{
+					"name": "comment.block.lmsasm",
+					"begin": "/\\*",
+					"end": "\\*/"
+				}
+			]
+		}
+	}
+}
