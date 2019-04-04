@@ -2,7 +2,7 @@
     "name": "lmsasm",
     "displayName": "LMS Assembly Language",
     "description": "Language support for LEGO® MINDSTORMS Assembly (lmsasm) language.",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "publisher": "dlech",
     "repository": {
         "type": "git",
@@ -13,19 +13,28 @@
         "vscode": "^1.13.0"
     },
     "categories": [
-        "Languages"
+        "Programming Languages"
     ],
     "contributes": {
-        "languages": [{
-            "id": "lmsasm",
-            "aliases": ["LMS Assembly", "lmsasm"],
-            "extensions": [".lms"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "lmsasm",
-            "scopeName": "source.lmsasm",
-            "path": "./syntaxes/lmsasm.tmLanguage.json"
-        }]
+        "languages": [
+            {
+                "id": "lmsasm",
+                "aliases": [
+                    "LMS Assembly",
+                    "lmsasm"
+                ],
+                "extensions": [
+                    ".lms"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "lmsasm",
+                "scopeName": "source.lmsasm",
+                "path": "./syntaxes/lmsasm.tmLanguage.json"
+            }
+        ]
     }
 }
