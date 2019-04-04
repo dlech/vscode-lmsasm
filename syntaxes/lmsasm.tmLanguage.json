@@ -72,7 +72,7 @@
 		"object-declarations": {
 			"patterns": [
 				{
-					"begin": "\\b(vmthread|subcall)\\s+(\\w+)",
+					"begin": "\\b(vmthread|subcall|block)\\s+(\\w+)",
 					"end": "\\}",
 					"beginCaptures": {
 						"1": {
