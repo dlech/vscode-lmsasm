@@ -47,7 +47,7 @@
 		"variable-declarations": {
 			"patterns": [
 				{
-					"match": "\\b(DATA(?:8|16|32|S|F)|(?:IN|OUT|IO)_(?:8|16|32|S|F))\\s+(\\w+)(?:\\s+(.*))?",
+					"match": "\\b(DATA(?:8|16|32|S|F)|ARRAY(?:8|16|32|F)|(?:IN|OUT|IO)_(?:8|16|32|S|F))\\s+(\\w+)(?:\\s+(.*))?",
 					"captures": {
 						"1": {
 							"name": "support.type.lmsasm"
