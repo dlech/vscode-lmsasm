@@ -3,7 +3,7 @@ All notable changes to the "lmsasm" extension will be documented in this file.
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
-## Unreleased
+## 1.0.2
 ### Added
 - Add match for `ARRAY` data types
 
