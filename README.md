@@ -6,6 +6,13 @@ This is a Visual Studio Code extension for the LEGO® MINDSTORMS Assembly langua
 It currently only supports syntax highlighting for `.lms` files.
 
 
+Compiler
+--------
+
+An `lmsasm` compiler to compile `.lms` files to `.rbf` files is available at
+<https://github.com/ev3dev/lmsasm>.
+
+
 Support, etc.
 -------------
 
