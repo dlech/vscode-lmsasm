@@ -3,7 +3,8 @@
     "displayName": "LMS Assembly Language",
     "description": "Language support for LEGO® MINDSTORMS Assembly (lmsasm) language.",
     "version": "1.0.1",
-    "publisher": "dlech",
+	"publisher": "dlech",
+	"icon": "logo.png",
     "repository": {
         "type": "git",
         "url": "https://github.com/dlech/vscode-lmsasm.git"
