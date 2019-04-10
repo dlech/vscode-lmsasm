@@ -151,8 +151,24 @@
 					"include": "#strings"
 				},
 				{
-					"name": "constant.numeric.lmsasm",
-					"match": "\\b(0x[a-fA-F0-9]+|\\d+\\.?\\d*)\\b"
+					"name": "invalid.illegal.lmsasm",
+					"match": "\\b\\d+\\.\\d+\\b",
+					"comment": "Numbers with decimal point and no F suffix are illegal"
+				},
+				{
+					"name": "constant.numeric.float.lmsasm",
+					"match": "\\b\\d+\\.\\d+F\\b",
+					"comment": "Numbers with decimal point and F suffix are float constants"
+				},
+				{
+					"name": "constant.numeric.integer.hexadecimal.lmsasm",
+					"match": "\\b0x[a-fA-F0-9]+\\b",
+					"comment": "C-style hexadecimal numbers"
+				},
+				{
+					"name": "constant.numeric.integer.decimal.lmsasm",
+					"match": "\\b\\d+\\b",
+					"comment": "Just plain integers"
 				},
 				{
 					"name":"support.constant.lmsasm",
