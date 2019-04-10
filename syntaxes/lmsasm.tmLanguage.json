@@ -76,7 +76,7 @@
 					"end": "\\}",
 					"beginCaptures": {
 						"1": {
-							"name": "keyword.other.lmsasm"
+							"name": "keyword.declaration.function.lmsasm"
 						},
 						"2": {
 							"name": "entity.name.function.lmsasm"
@@ -140,7 +140,7 @@
 		"labels": {
 			"patterns": [
 				{
-					"name": "meta.tag.lmsasm",
+					"name": "entity.name.label.lmsasm",
 					"match": "\\b\\w+:"
 				}
 			]
