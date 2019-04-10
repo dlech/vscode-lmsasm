@@ -9,13 +9,13 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 ### Fixed
 - Fix highlighting of float literals
 
-## 1.0.2
+## 1.0.2 - 2019-04-09
 ### Added
 - Add match for `ARRAY` data types
 
-## 1.0.1
+## 1.0.1 - 2019-04-04
 ### Added
 - Add `block` keyword
 
-## 1.0.0
+## 1.0.0 - 2017-06-26
 - Initial release
