@@ -2,7 +2,7 @@
     "name": "lmsasm",
     "displayName": "LMS Assembly Language",
     "description": "Language support for LEGO® MINDSTORMS Assembly (lmsasm) language.",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "publisher": "dlech",
     "icon": "logo.png",
     "repository": {

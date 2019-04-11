@@ -3,7 +3,7 @@ All notable changes to the "lmsasm" extension will be documented in this file.
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
-## Unreleased
+## 1.0.3 - 2019-04-11
 ### Added
 - Add invalid highlighting for float literals without F suffix
 ### Fixed
