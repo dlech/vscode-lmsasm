@@ -4,6 +4,8 @@ All notable changes to the "lmsasm" extension will be documented in this file.
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
 ## Unreleased
+### Added
+- Add highlighting of HANDLE data type
 ### Fixed
 - Fix highlighting of float literals when no decimal point or when exponent
 
