@@ -157,7 +157,7 @@
 				},
 				{
 					"name": "constant.numeric.float.lmsasm",
-					"match": "\\b\\d+\\.\\d+F\\b",
+					"match": "\\b\\d+(\\.\\d+)?(E\\d+)?F\\b",
 					"comment": "Numbers with decimal point and F suffix are float constants"
 				},
 				{
